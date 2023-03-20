@@ -5,8 +5,8 @@ urlpatterns = [
     
     path('sayHiPokemon/',views.hello_pokemon_world),
     path('getAllPokemons/', views.getAllPokemons),
-    path('addPokemon/', views.addPokemon),
     path('getPokemonById/', views.getPokemonById),
+    path('addPokemon/', views.addPokemon),
     path('getPokemonByName/', views.getPokemonByName),
     path('deletePokemonById/<int:id>', views.deletePokemonById),
     path('updatePokemon/<int:id>', views.updatePokemon),   
