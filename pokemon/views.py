@@ -59,6 +59,16 @@ def getAllTypes(request):
         data={"message": "No types found..."}
     return JsonResponse(data)  
 
+@api_view(['GET'])
+def getTypeById(request):
+    idT = request.GET.get('idType')
+    try:
+        pokemon= list(PokemonType.objects.values().filter(idType=idT))[0]
+        data={"message": "Success","data":pokemon}
+    except:
+        data={"message": "No type found..."}  
+    return JsonResponse(data)
+
 
 @api_view(['GET'])
 def getTypesForPokemon(request):

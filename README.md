@@ -31,6 +31,7 @@ For the Pokemon project there were defined the necessary endpoints for the CRUD,
 | GET | http://127.0.0.1:8000/api/getPokemonById/ |This endpoint has the purpose to return a pokemon base on the id.|idPokedex ej. idPokedex=1|
 | GET | http://127.0.0.1:8000/api/getPokemonByName/ |This endpoint has the purpose to return a pokemon base on the name.|name ej. name=Pikachu|
 | GET | http://127.0.0.1:8000/api/getAllTypes/ |This endpoint has the purpose to return all the types.||
+| GET | http://127.0.0.1:8000/api/getTypeById/ |This endpoint has the purpose to return a type base on the id.|idType ej. idType=1|
 | GET | http://127.0.0.1:8000/api/getTypesForPokemon/ |This endpoint has the purpose to return all the types of a pokemon.|idPokedex ej. idPokedex=1|
 | GET | http://127.0.0.1:8000/api/getPokemonsFromType/ |This endpoint has the purpose to return all the pokemons associated to an specific type|idType ej. idType=1|
 | GET | http://127.0.0.1:8000/api/getAllTypesVsTypes|This endpoint has the purpose to return all Types VS Types (Attacker vs Defender) data|

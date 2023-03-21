@@ -13,6 +13,7 @@ urlpatterns = [
     
     
     path('getAllTypes/', views.getAllTypes),
+    path('getTypeById/', views.getTypeById),
     path('getTypesForPokemon/', views.getTypesForPokemon),
     
     path('getPokemonsFromType/', views.getPokemonsFromType),
