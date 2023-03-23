@@ -17,6 +17,7 @@ urlpatterns = [
     path('getTypesForPokemon/', views.getTypesForPokemon),
     
     path('getPokemonsFromType/', views.getPokemonsFromType),
+    path('getPokemonsFromWord/', views.getPokemonsFromWord),
     
     path('getAllTypesVsTypes/', views.getAllTypesVsTypes),
     

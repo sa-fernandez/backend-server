@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import  HttpResponse, JsonResponse
 from django.views import View
 from pokemon.models import Pokemon, PokemonType, PokemonTypeHasType, TypeVsType
+from django.db.models import Q
 from django.core.serializers import serialize
 import json
 from django.views.decorators.csrf import csrf_exempt
@@ -59,6 +60,7 @@ def getAllTypes(request):
         data={"message": "No types found..."}
     return JsonResponse(data)  
 
+
 @api_view(['GET'])
 def getTypeById(request):
     idT = request.GET.get('idType')
@@ -93,6 +95,16 @@ def getPokemonsFromType(request):
             data={"message": "No pokemons found..."}  
         return JsonResponse(data)     
 
+
+@api_view(['GET'])
+def getPokemonsFromWord(request):
+        try:
+            word = request.GET.get('word')
+            pokemon = list(Pokemon.objects.values().filter(Q(name__contains=word) | Q(name__startswith=word.capitalize())))
+            data={"message": "Success","data":pokemon}
+        except:
+            data={"message": "No pokemons found..."}  
+        return JsonResponse(data) 
 
 
 @api_view(['GET'])
