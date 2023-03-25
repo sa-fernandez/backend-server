@@ -127,7 +127,7 @@ USE_I18N = True
 USE_TZ = True
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200"
+    "http://10.43.101.94"
 ]
 
 
