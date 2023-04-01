@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+MAIN_ROUTE="api/"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/',include('pokemon.urls'))
-    
+    path(f'{MAIN_ROUTE}',include('pokemon.urls')),
+    path(f'{MAIN_ROUTE}images/',include('poke_api_handler.urls'))
 ]

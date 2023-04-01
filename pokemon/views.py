@@ -123,7 +123,6 @@ def getAllTypesVsTypes(request):
 
 @api_view(['GET'])
 def getPokemonAttachDefenseData(request):
-    
         try:
             idPokedex = request.GET.get('idPokedex')
             pokemon_types_ids = list(PokemonTypeHasType.objects.values().filter(Pokemon_idPokedex=idPokedex))
