@@ -25,4 +25,4 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Push image to Docker Hub
-      run: docker push archidex-backend:latest
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/archidex-backend:latest
